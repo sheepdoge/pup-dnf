@@ -1,0 +1,18 @@
+galaxy_info:
+  author: mattjmcnaughton
+  description: A pup for dnf configuration.
+
+  license: Apache
+
+  min_ansible_version: 1.2
+
+  platforms:
+    - name: Fedora
+      versions:
+        - all
+
+  galaxy_tags:
+    - sheepdoge
+    - dnf
+
+dependencies: []

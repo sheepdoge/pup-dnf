@@ -1,0 +1,19 @@
+---
+- block:
+  - name: update dnf cache
+    dnf:
+      update_cache: yes
+
+  - name: install the desired packages
+    dnf:
+      name: "{{ item }}"
+      state: latest
+    with_items: "{{ packages_to_install }}"
+
+
+  - name: uninstall the desired packages
+    dnf:
+      name: "{{ item }}"
+      state: absent
+    with_items: "{{ packages_to_uninstall }}"
+  become: true
